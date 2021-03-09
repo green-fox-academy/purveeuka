@@ -3,7 +3,7 @@ public class UrlFixer {
         String url = "https//www.reddit.com/r/nevertellmethebots";
         url = "https//www.reddit.com/r/nevertellmetheodds";
         System.out.println(url);
-        //System.out.println(url.replace("nevertellmethebots", "nevertellmetheodds"));
+        System.out.println(url.replace("nevertellmethebots", "nevertellmetheodds"));
     }
 
 }
