@@ -23,6 +23,7 @@ public class ListIntroduction1 {
         for (String i : names) {
             System.out.println(i);
         }
+
         int j = 1;
         for (String i : names) {
             System.out.println(j + ". " + i);
