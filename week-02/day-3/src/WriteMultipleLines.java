@@ -8,7 +8,8 @@ public class WriteMultipleLines {
     public static void main(String[] args) {
         String word = "apple";
         int numberOfLines = 5;
-        writeToFile("textFiles/my-file.txt", word, numberOfLines);
+        writeToFile("Apple5.txt", word, numberOfLines);
+
     }
 
     private static void writeToFile( String filepath, String word, int numbers) {
