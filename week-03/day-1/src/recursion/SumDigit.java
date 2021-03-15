@@ -9,7 +9,6 @@ public class SumDigit {
             return 0;
         } else return (number % 10 + sumOfDigit(number / 10));
     }
-
 }
 // Given a non-negative integer n, return the sum of it's digits recursively
 // (without loops).
