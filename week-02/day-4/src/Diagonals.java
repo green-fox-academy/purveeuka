@@ -5,7 +5,7 @@ import java.awt.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class Diagonals {
     public static void drawImage(Graphics graphics) {
-        drawLine(graphics, 50,60);
+        drawLine(graphics, 0,0);
         // Create a function that draws a single line
         // Use this function to draw the canvas' diagonals
         // If the line starts from the upper-left corner it should be green, otherwise it should be red
@@ -13,7 +13,7 @@ public class Diagonals {
     }
 
     public static void drawLine(Graphics graphics, int x, int y) {
-        if (x == 0 && y ==0) {
+        if (x == 0 && y == 0) {
            graphics.setColor(Color.green);
         }else {
             graphics.setColor(Color.red);
