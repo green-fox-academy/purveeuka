@@ -11,7 +11,6 @@ public class PersonalFinance {
         expenses.add(800);
         expenses.add(120);
 
-
         int sum = 0;
         for ( int i =0 ; i < expenses.size(); i++){
             sum = sum + expenses.get(i);
@@ -19,10 +18,10 @@ public class PersonalFinance {
         System.out.println("We spent: " + sum);
 
         Collections.sort(expenses);
+
         System.out.println("The greatest expense was: " + expenses.get(expenses.size()-1));
         System.out.println("The cheapest spending was: " + expenses.get(0) );
         System.out.println("The average amount of spending is: " + (sum /= expenses.size()));
-
     }
 }
 
