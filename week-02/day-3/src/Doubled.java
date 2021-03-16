@@ -1,10 +1,8 @@
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 public class Doubled {
     public static void main(String[] args) {
@@ -24,7 +22,7 @@ public class Doubled {
                 String temporary2 = "";
                 for (int j = 0; j < temporary.length() ; j++) {
                     if (j % 2 == 0)
-                        temporary2 = temporary2 + String.valueOf(temporary.charAt(j));
+                        temporary2 = temporary2 + (temporary.charAt(j));
                 } decryptedLines.add(chars, temporary2);
             }
             Files.write(filepath, decryptedLines);
