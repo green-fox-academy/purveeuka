@@ -1,0 +1,3 @@
+[ ] Walk the dog. - Take the dog for evening walk within 500m radius.
+[x] Buy milk. - Buy 2 bottles of milk.
+[ ] Do homework. - Do math homework.
