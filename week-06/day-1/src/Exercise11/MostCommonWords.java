@@ -15,7 +15,7 @@ public class MostCommonWords {
             Map<String, Integer> commonWords = Files.lines(Path.of("src/Text-Files/US-Election-Wiki.txt"))
                     .map(Pattern.compile("\\p{Punct}") :: matcher).map(matcher -> matcher.replaceAll(""))
                     .flatMap(Pattern.compile("\\s+") :: splitAsStream).filter(Pattern.compile("^\\w+$").asPredicate())
-                    .filter(w -> w.length() >= 3).map(s -> s.toLowerCase()).collect(Collectors.groupingBy(w -> w, Collectors.summingInt(w -> 1)));
+                    .filter(w -> w.length() >= 3).map(String::toLowerCase).collect(Collectors.groupingBy(w -> w, Collectors.summingInt(w -> 1)));
 
             commonWords.entrySet()
                     .stream().sorted(Map.Entry.comparingByKey(Comparator.reverseOrder()))
