@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class StarWars {
     public static void main(String[] args) {
-     List<String> lines = readFile("src/Text-Files/ swcharacters.csv");
+     List<String> lines = readFile();
      List<SwCharacter> swCharacters = lines.stream().map(SwCharacter::new).collect(Collectors.toList());
 
      //Print the name of the heaviest character (if the mass is unknown, ignore that character)
@@ -35,7 +35,7 @@ public class StarWars {
      Map<String, Map<String, Integer>> ageAndGender = swCharacters
              .stream()
              .collect(
-                     Collectors.groupingBy((SwCharacter ch) -> ch.getGender(),
+                     Collectors.groupingBy(SwCharacter::getGender,
                              Collectors.groupingBy(
                                      (SwCharacter ch) -> ageGroup(ch.getAge()),
                                      Collectors.summingInt(ch -> 1)
@@ -59,16 +59,16 @@ public class StarWars {
             return "below 21";
         } else if (age <= 40) {
             return "between 21 and 40";
-        } else if (age > 40) {
+        } else if (age > 41) {
             return "above 40";
         } else {
             return "unknown";
         }
     }
 
-    private static List<String> readFile(String fileName){
+    private static List<String> readFile(){
         List<String> fileContent = new ArrayList<>();
-        Path path = Path.of(fileName);
+        Path path = Path.of("src/Text-Files/ swcharacters.csv");
         try {
             fileContent = Files.readAllLines(path);
             fileContent.remove(0);

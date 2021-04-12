@@ -18,7 +18,6 @@ public class SwCharacter {
         this.mass = numValidator(data[2]);
         this.gender = genderValidator(data[7]);
         this.age = dateValidator(data[6]);
-
     }
 
     private int dateValidator(String data) {
@@ -31,17 +30,11 @@ public class SwCharacter {
 
     private int numValidator(String data) {
         return numPattern.matcher(data).find() ? Integer.parseInt(data) : 1;
-
     }
 
     @Override
     public String toString() {
         return this.name + ", " + this.age + " years old " + this.gender + ", Height: " + this.height + "cm Mass: " + this.mass + "kg";
-    }
-
-
-    public String getName() {
-        return name;
     }
 
     public int getHeight() {
