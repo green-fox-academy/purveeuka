@@ -26,7 +26,6 @@ public class MostCommonWords {
     }
 }
 
-
 /*
 Find a random Wikipedia article and copy the contents to a txt file.
 Create a Stream expression which reads all text from this file, and prints the 100 most common words in descending order.
