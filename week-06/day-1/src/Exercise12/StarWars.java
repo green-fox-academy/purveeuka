@@ -31,6 +31,7 @@ public class StarWars {
      The age groups are: "below 21", "between 21 and 40", "above 40" and "unknown"
      The result should be a Map<String, Map<String, Integer>>
      */
+
      Map<String, Map<String, Integer>> ageAndGender = swCharacters
              .stream()
              .collect(
