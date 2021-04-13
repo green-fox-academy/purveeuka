@@ -1,0 +1,54 @@
+html{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    display: table-cell;
+    background-color: deepskyblue;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    padding: 0.5em;
+    color: white;
+    text-align: left;
+}
+
+table {
+    background-color: #aaa;
+    font-size: 1.5em;
+    margin: auto;
+}
+
+td, th {
+    border-collapse: collapse;
+    padding: 0.8em;
+    min-width: auto;
+}
+
+tbody {
+    background-color: white;
+    color: darkgray;
+}
+
+tbody tr:nth-child(even) {
+    background-color: lightgrey;
+}
+
+thead th {
+    background-color: #444444;
+    font-weight: lighter;
+    border-bottom-style: solid;
+    border-color:#aaa;
+}
+
+@media screen  and (min-width: 375px) {
+    table {
+        margin: auto;
+        width: 100%;
+    }
+
+    tbody tr:first-child td {
+        border-top-width: 1px;
+    }
+}
+
