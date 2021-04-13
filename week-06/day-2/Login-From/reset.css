@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+}
+ul, ol {list-style:none}
+body {line-height:1}
+main, figure, figcaption, img {display:block} /*--- <main> for IE 11 ---*/
+img {max-width:100%;height:auto}
+input, textarea, select, button {display:block;max-width:100%;font-family:inherit;font-size:inherit;color:inherit}
+label {display:table}
+input, button {-webkit-appearance:none} /*--- for Safari (add/remove types as needed) ---*/
+button {line-height:inherit}
+button::-moz-focus-inner {border:0} /*--- for Firefox ---*/
+html {-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:1.25em} /*--- optional base font size ---*/

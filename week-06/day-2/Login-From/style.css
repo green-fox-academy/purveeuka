@@ -1,0 +1,101 @@
+html {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: lighter;
+    background-color: ghostwhite;
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 100%;
+}
+
+form {
+    background-color: white;
+    padding: 1em 2em;
+    margin: auto;
+    width: 420px;
+    box-sizing: border-box;
+}
+ form div h2 {
+     font-weight: lighter;
+     color: dimgrey;
+ }
+
+form div {
+    margin: 1em auto;
+    width: 100%;
+}
+
+form div::after {
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+form div  label, form div input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5em;
+}
+
+form div input {
+    padding: 0.5em;
+    border: 1px  solid lightgrey;
+}
+
+form div input:focus {
+    border-color: limegreen ;
+}
+
+form div input[type=password] {
+    background-image: url("#") ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 2em;
+}
+
+form div a {
+    position: relative;
+    float: right;
+    margin-top: 0.5em;
+    color: #888888;
+}
+
+form div a::after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    height: 0.125em;
+    transition: background-color 0.25s ease-in-out;
+}
+
+form div a:hover::after {
+    background-color: #888888;
+}
+
+form div button[type=submit] {
+    background-color: black;
+    color: white;
+    line-height: 2em;
+    padding: 0 2em;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+}
+
+form div button[type=submit]:hover {
+    background-color: #888888;
+}
+
+@media only screen and (max-width: 375px) {
+
+    form {
+        width:100%;
+        padding: 1em;
+    }
+}
