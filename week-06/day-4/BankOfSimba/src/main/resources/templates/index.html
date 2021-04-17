@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Bank of Simba</title>
+</head>
+<body>
+<section class="accounts-list">
+    <h2>Bank of Simba</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Order</th>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Currency</th>
+            <th>Good one?</th>
+            <th>King?</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="account : ${accounts}">
+            <td class="order"
+                th:text="${accountStat.count}"></td>
+            <td th:text="${account.name}"></td>
+            <td class="balance"
+                th:text="${account.getBalancePrettified()}"></td>
+            <td class="currency"
+                th:text="${account.getCurrency()}"></td>
+            <td class="good-one"
+                th:text="${account.isGood()}? 'Good One' : 'Bad Guy'"></td>
+            <td th:text="${account.isKing()}? 'King'" style="color: gold"></td>
+            <td>
+                <a th:href="@{/bank/{id}/raise (id=${accountStat.count})}" class="button">RAISE!</a>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+</section>
+
+<section class="account-add">
+    <h2>Add client</h2>
+    <form action="#" th:action="@{/bank/add}" th:object="${account}" method="post">
+        <div>
+            <p> <label th:text="Name"></label> <label><input type="text" th:field="*{name}"  required/></label></p>
+            <p> <label th:text="Species"></label> <label><input type="text" th:field="*{animalType}"  required/></label></p>
+            <p> <label th:text="Currency"></label> <label><input type="text" th:field="*{currency}"  required/></label></p>
+            <p> <label th:text="Balance"></label> <label><input type="number" th:field="*{balance}" required/></label></p>
+        </div>
+        <div class="controls">
+            <input type="submit" value="Submit" class="button" />
+        </div>
+    </form>
+</section>
+
+</body>
+</html>
