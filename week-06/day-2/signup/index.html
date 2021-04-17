@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+<form action="action=https://newsletter-ws.herokuapp.com/register" method="post" autocomplete="off">
+  <section class="holder">
+    <h2>Sign up</h2>
+    <label>
+      <input type="text" name="name" required autofocus placeholder="Username" autocomplete="off">
+    </label>
+    <label>
+      <input type="email" name="email" required autofocus placeholder="E-mail" autocomplete="off">
+    </label>
+    <label>
+      <input type="password" name="pass" required autofocus placeholder="Password" autocomplete="off">
+    </label>
+    <label>
+      <input type="password" name="passwordConfirmation" required autofocus placeholder="Retype password" autocomplete="off">
+    </label>
+    <button type="submit">SING ME UP</button>
+  </section>
+
+  <section class="separator">
+    <span>OR</span>
+  </section>
+
+  <section class="holder">
+    <button type="button" href="https://www.facebook.com/"  class="fb-colors social"> Log in with facebook</button>
+    <button type="button"  href="https://twitter.com/"  class="tw-colors social"> Log in with Twitter</button>
+    <button type="button"  href="https://www.google.com/" class="g-colors social"> Log in with Google</button>
+  </section>
+</form>
+
+</body>
+</html>

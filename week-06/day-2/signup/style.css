@@ -1,0 +1,112 @@
+html {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+    background-color: lightgrey;
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 100%;
+}
+
+form {
+    border-radius: 5px;
+    background-color: white;
+    display: table;
+    padding: 1em 2em;
+    margin: auto;
+    box-sizing: border-box;
+    border-bottom: #444444;
+}
+
+form section {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+form section.separator {
+    text-align: center;
+}
+
+form section.separator span {
+    font-size: 1.5em;
+    width: 3em;
+    text-align: center;
+    margin: 2em;
+    background-color: #aaa;
+    border-radius: 3em;
+    box-shadow: 0 0.12em 0.25em #444;
+}
+
+form section.holder {
+    width: 250px;
+    height: 400px;
+}
+
+form section.holder > * {
+    margin: 1em;
+    border: #55ACEE;
+}
+
+form section.holder > input {
+    display: initial;
+    padding: 1em;
+    position: relative;
+    box-shadow: -1px 0 #888 inset;
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+form section.holder > input:focus {
+    box-shadow: 0 -0.125em 0 blue inset;
+}
+
+form section.holder button {
+    padding: 1em;
+    color: white;
+    background-color: #16A085;
+    cursor: pointer;
+    transition: opacity 0.25s ease-in-out;
+    border-radius: 5px;
+}
+
+form section.holder button:hover {
+    opacity: 0.8;
+}
+
+form section.holder button.social {
+    width: 100%;
+}
+ .fb-colors {
+     background-color: #32508E !important;
+ }
+
+ .tw-colors {
+     background-color: #55ACEE !important;
+ }
+
+ .g-colors {
+     background-color: #DD4B39 !important;
+ }
+
+@media screen and (max-width: 640px) {
+
+    form {
+        margin:0;
+        width: 100%;
+    }
+
+    form section{
+        display: block;
+    }
+
+    form section.holder, form section.separator {
+        width: 100%;
+    }
+
+    form section input {
+        width: 100%;
+    }
+}
