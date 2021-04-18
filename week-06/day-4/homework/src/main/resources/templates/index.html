@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<link rel="stylesheet" href="../static/index.css">
+
+<main layout:fragment="content">
+
+    <section class="books-search">
+        <form action="#" th:action="@{/books/{id}/details}" th:object="${book}" method="GET">
+            <p>Author name: <input type="text" th:field="*{author}" /></p>
+            <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+            <p><a th:href="@{/books/add}">add new book instead</a></p>
+        </form>
+    </section>
+
+    <section class="books-list">
+        <div th:each="book : ${books}">
+            <h1
+                    th:text="${book.author} + ' - ' +${book.title} + ' (' + ${book.releaseYear} + ') '"
+            ></h1>
+            <a th:href="@{/books/{id}/edit (id=${book.id})}">edit book</a>
+        </div>
+    </section>
+
+</main>
+
+</html>
