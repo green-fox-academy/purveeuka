@@ -147,7 +147,7 @@ public class BasicWebShopController {
         return "index2";
     }
 
-    @PostMapping("/more-filters/filter-price")
+    @PostMapping("/more-filters")
     public String choosePrice(Model model,@RequestParam int price,  @RequestParam(value = "value") String value) {
         model.addAttribute("currency", currency);
         model.addAttribute("shopItems", shopItems);
