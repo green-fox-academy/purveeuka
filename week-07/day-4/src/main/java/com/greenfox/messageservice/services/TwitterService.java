@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 public class TwitterService implements  MessageService{
 
     @Override
-    public String sendMessage() {
-        return "Twitted: ";
+    public String sendMessage(String sms, String emailAddress) {
+        return "Tweet sent to: " + emailAddress  + " with Message: " + sms;
     }
 }

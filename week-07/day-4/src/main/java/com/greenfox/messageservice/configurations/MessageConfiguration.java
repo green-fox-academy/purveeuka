@@ -1,20 +1,23 @@
 package com.greenfox.messageservice.configurations;
-
 import com.greenfox.messageservice.services.EmailService;
 import com.greenfox.messageservice.services.MessageService;
+import com.greenfox.messageservice.services.TwitterService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 
 @Configuration
-@ComponentScan
 public class MessageConfiguration {
 
-    @Primary
+    @Qualifier("email")
     @Bean
-    public MessageService service() {
+    public MessageService sendEmail() {
         return new EmailService();
     }
 
+    @Qualifier("tweet")
+    @Bean
+    public MessageService sendTweet() {
+        return new TwitterService();
+    }
 }

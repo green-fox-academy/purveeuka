@@ -1,5 +1,4 @@
 package com.greenfox.messageservice;
-
 import com.greenfox.messageservice.configurations.MessageProceeder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -22,7 +21,7 @@ public class MessageServiceApplication implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         messageProceeder.processSms("Hi Barba! How are you?","office@greenfox.com" );
     }
 }
