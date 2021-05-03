@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>add task</title>
+</head>
+<body>
+<h1>Add  new todo:</h1> <a  th:href="@{/todo/listAll}" th:text="'Go back'" class="button"></a>
+
+<form th:action="@{/todo/add}" method="post" th:object="${todo}">
+  <label for="title">Title</label>
+    <br>
+
+  <input type="text" name="title" id="title" placeholder="write your title here..."/>
+    <br>
+
+    <label for="description">Description</label>
+    <br>
+
+    <textarea type="text" name="description" id="description"
+              placeholder="write your description here ..." cols="20" rows="5"></textarea>
+    <br>
+
+  <label>
+    <input type="checkbox" th:field="*{urgent}">
+  </label>
+  <label  th:for="'urgent'" th:text="'urgent'"></label>
+  <br>
+
+  <label>
+    <input type="checkbox" th:field="*{done}">
+  </label>
+  <label th:for="'done'" th:text="'done'"></label>
+  <br>
+
+  <label for="dueDate">Due Date</label>
+  <input required type="date" id="dueDate" name="dueDate">
+
+    <br>
+    <button type="submit">Submit</button>
+<br>
+
+</form>
+</body>
+</html>

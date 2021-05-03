@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>assigned todos</title>
+</head>
+<body>
+<h1>Assigned todos</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tittle</th>
+        <th>Urgent</th>
+        <th>Done</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="todo : ${todos}" th:object="${todo}">
+        <td th:text="*{id}"></td>
+        <td th:text="*{title}"></td>
+        <td th:text="*{isUrgent()}"></td>
+        <td th:text="*{isDone()}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

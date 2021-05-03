@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add new assignee</h1>
+<a th:href="@{/todo/listAll}" th:text="'Home'" class="button"></a> <a th:href="@{/assignee/list}" th:text="'Go back'" class="button"></a>
+<form action="/assignee/addAssignee" method="post">
+  <label for="nameOfAssignee">Name</label>
+  <input type="text" id="nameOfAssignee" name="name">
+  <label for="mailOfAssignee">Email</label>
+  <input type="text" id="mailOfAssignee" name="email">
+  <button type="submit">Add assignee</button>
+
+</form>
+</body>
+</html>

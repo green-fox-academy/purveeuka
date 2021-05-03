@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Todo</title>
+</head>
+<body>
+<h1>Edit todo</h1>
+<a  th:href="@{/todo/listAll}" th:text="'Home'" class="button"></a>
+
+<form th:action="@{/todo/{id}/edit(id=*{id})}" method="POST" th:object="${todo}">
+  <label  th:for="'title'" th:text="'Task title'"></label>
+  <br>
+  <label>
+    <input  type="text" th:field="*{title}" th:placeholder="'Write your title here'">
+  </label>
+  <br>
+
+  <label for="description">Description</label>
+
+  <br>
+
+  <textarea type="text" name="description" id="description"
+            placeholder="write your description here ..." cols="20" rows="5"></textarea>
+  <br>
+
+  <label>
+    <input type="checkbox" th:field="*{urgent}">
+  </label>
+
+  <label  th:for="'urgent'" th:text="'urgent'"></label>
+  <br>
+
+  <label>
+    <input type="checkbox" th:field="*{done}">
+  </label>
+  <label th:for="'done'" th:text="'done'"></label>
+  <br>
+
+  <label for="assigneeId">Assign task to</label>
+  <select name="assigneeId" id="assigneeId">
+    <option th:each="assignee : ${assignees}" th:value="${assignee.id}" th:text="${assignee.name}"></option>
+  </select>
+  <label for="dueDate">Due Date</label>
+  <input required type="date" id="dueDate" name="dueDate">
+  <br><br>
+  <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
