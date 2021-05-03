@@ -133,7 +133,4 @@ public class MainController {
         logService.log("/sith", sith.toString());
         return new ResponseEntity<>(new ErrorDoubling("Feed me some text you have to, padawan young you are. Hmmm."), HttpStatus.BAD_REQUEST);
     }
-
-
-
 }
