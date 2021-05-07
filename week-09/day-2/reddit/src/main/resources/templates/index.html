@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Aze Reddit</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <style>
+
+  </style>
+
+
+</head>
+
+<body>
+<nav style="">
+    <span id="user-login">
+      <a href="#" id="show_register">Register</a>
+      <a href="#" id="show_login">Login</a>
+    </span>
+  <span id="user-info" class="hidden">
+      Logged in
+    </span>
+  <a href="#" id="add_post">Add new post</a>
+</nav>
+
+<header class="header" style="background-color: #a3e58f; margin: 0;">
+  <a href="/" style="text-align: center; font-size: 42px; color: black; text-decoration: none;">
+    <h1 style="text-align: center; font-size: 42px; margin: 0; padding: 25px 0">Green Reddit</h1>
+  </a>
+</header>
+
+<div id="forms" style="width: 800px; margin: 20px auto;">
+  <div id="login" class="new hidden">
+    <form>
+      <h2> Login </h2>
+      <div class="form-group">
+        <label for="url">Username</label>
+        <input type="text" id="username-l" name="username" />
+      </div>
+      <div class="form-group">
+        <label for="title">Password</label>
+        <input type="password" id="password-l" name="password" />
+      </div>
+      <input type="submit" value="Login" id="submit-login" />
+    </form>
+  </div>
+
+  <div id="register" class="new hidden">
+    <form>
+      <h2> Register </h2>
+      <div class="form-group">
+        <label for="url">Username</label>
+        <input type="text" id="username-r" name="username" />
+      </div>
+      <div class="form-group">
+        <label for="title">Password</label>
+        <input type="password" id="password-r" name="password" />
+      </div>
+      <input type="submit" value="Register" id="submit-register" />
+    </form>
+  </div>
+
+  <div id="new" class="new hidden">
+    <form>
+      <div class="form-group">
+        <label for="url">url</label>
+        <input type="text" id="url" name="url" />
+      </div>
+      <div class="form-group">
+        <label for="title"><span>*</span>title</label>
+        <input type="text" id="title" name="title" />
+      </div>
+      <input type="submit" value="submit" id="submit-post" />
+    </form>
+  </div>
+</div>
+
+<main>
+
+</main>
+<script src="js/frontend.js"></script>
+</body>
+
+</html>
